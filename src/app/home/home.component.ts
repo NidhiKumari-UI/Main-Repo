@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FoodService } from '../services/food/food.service';
+import { Foods } from '../shared/models/food';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { StarRatingComponent } from 'ng-starrating';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +10,11 @@ import { FoodService } from '../services/food/food.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-foods: string[] = [];
+  faCoffee = faCoffee;
+  foods: Foods[] = [];
   constructor(private fs: FoodService) { }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.foods = this.fs.getAll();
   }
 
