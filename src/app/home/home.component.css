@@ -12,13 +12,21 @@ ul li a {
     width: 20rem;
     border: 1px solid whitesmoke;
     border-radius: 1rem;
-    margin: 0.5rem;
+    /* margin: 0.5rem; */
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    /* overflow: hidden; */
     color: #e72929;
+    margin: 5.5rem 0.5rem 0.5rem 0.5rem;
 }
 li a:hover {
     opacity: 0.9;
     cursor: pointer;
 }
+
+.favorite {
+    /* color: #e72929; */
+    color: transparent;
+    text-shadow: 0 0 0 #e72929;
+    cursor: pointer;
+}  
