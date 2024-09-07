@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {RatingModule} from 'ng-starrating';
 
+
 @NgModule({
   declarations: [
     AppComponent,
