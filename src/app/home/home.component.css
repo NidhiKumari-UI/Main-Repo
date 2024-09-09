@@ -8,7 +8,7 @@ ul {
 }
 
 ul li a {
-    height: 20rem;
+    height: 23rem;
     width: 20rem;
     border: 1px solid whitesmoke;
     border-radius: 1rem;
@@ -19,8 +19,8 @@ ul li a {
     color: #e72929;
     margin: 5.5rem 0.5rem 0.5rem 0.5rem;
 }
-li a:hover {
-    opacity: 0.9;
+li a :hover {
+    opacity: 0.8;
     cursor: pointer;
 }
 
@@ -30,3 +30,47 @@ li a:hover {
     text-shadow: 0 0 0 #e72929;
     cursor: pointer;
 }   
+ul li a .content :hover {
+    background-color: transparent; 
+    text-decoration: none;
+}
+.content {
+    padding: 15px 0 0 15px;
+    position: relative;
+}
+.favorite {
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    font-size: 1rem;
+}
+.favorite.not{
+    color: black;
+}
+.star {
+    margin-bottom: .2rem;
+}
+.product-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.origins {
+    flex: 9;
+}
+.origins span {
+    border-radius: 2rem;
+    background-color: whitesmoke;
+    color: grey;
+    font-size: .8rem;
+    margin-right: .3rem;
+    display: inline-block;
+}
+.cook-time {
+    font-size: .8rem;
+    flex: 3;
+}
+.price {
+    color: #424242;
+    margin-top: .2rem;
+}
