@@ -1,11 +1,35 @@
 import { Injectable } from '@angular/core';
+import { faAllergies } from '@fortawesome/free-solid-svg-icons';
 import { Foods } from 'src/app/shared/models/food';
+import { Tag } from 'src/app/shared/models/Tag';
 @Injectable({
   providedIn: 'root'
 })
 export class FoodService {
 
   constructor() { }
+  getAllFoodByTag(tag: string) : Foods[] {
+    // with Ternary Operator 
+    return tag == "All" ?
+    this.getAll() : this.getAll().filter(food => food.tags?.includes(tag));
+    // if(tag == 'All')
+    // return this.getAll()
+    // else 
+    // return this.getAll().filter(food => food.tags?.includes(tag));
+  }
+
+  getAllTag(): Tag[] {
+    return [
+      { name: 'All', count: 14 },
+      { name: 'FastFood', count: 4 },
+      { name: 'Pizza', count: 2 },
+      { name: 'Lunch', count: 3 },
+      { name: 'SlowFood', count: 12 },
+      { name: 'Hamburger', count: 1 },
+      { name: 'Fry', count: 1 },
+      { name: 'Soup', count: 1 },
+    ];
+  }
 
   getAll(): Foods[]  {
     return [
@@ -29,7 +53,7 @@ export class FoodService {
       origins: ['Belgium'],
       star: 2,
       imageUrl: '/assets/food2.jpeg',
-      tags: ['FastFood', 'Pizza', 'Lunch']
+      tags: ['SlowFood', 'Lunch']
     },
     {
       id: 3,
@@ -40,7 +64,7 @@ export class FoodService {
       origins: ['Germany'],
       star: 4,
       imageUrl: '/assets/food3.jpeg',
-      tags: ['FastFood', 'Pizza', 'Lunch']
+      tags: ['FastFood', 'Hamburger']
     },
     {
       id: 4,
@@ -51,7 +75,7 @@ export class FoodService {
       origins: ['Hungary'],
       star: 1,
       imageUrl: '/assets/food4.jpeg',
-      tags: ['FastFood', 'Pizza', 'Lunch']
+      tags: ['FastFood', 'Fry']
     },
     {
       id: 5,
@@ -62,7 +86,7 @@ export class FoodService {
       origins: ['Greece'],
       star: 4,
       imageUrl: '/assets/food5.jpeg',
-      tags: ['FastFood', 'Pizza', 'Lunch']
+      tags: ['SlowFood', 'Soup']
     },
     {
       id: 6,
