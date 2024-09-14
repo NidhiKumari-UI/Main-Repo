@@ -11,6 +11,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {RatingModule} from 'ng-starrating';
 import { SearchComponent } from './search/search.component';
 import { TagsComponent } from './tags/tags.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
+import { FoodPageComponent } from './food-page/food-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { TagsComponent } from './tags/tags.component';
     HeaderComponent,
     HomeComponent,
     SearchComponent,
-    TagsComponent
+    TagsComponent,
+    CartPageComponent,
+    FoodPageComponent
   ],
   imports: [
     BrowserModule,
